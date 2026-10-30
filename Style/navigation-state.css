@@ -1,0 +1,19 @@
+nav ul::-webkit-scrollbar {
+    display: none;
+}
+
+nav a {
+    display: block;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+nav a.active {
+    background: #00aff0;
+    border-color: #007bff;
+    color: #fff;
+}
+
+nav a.active:visited {
+    color: #fff;
+}

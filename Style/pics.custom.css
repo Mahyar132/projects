@@ -1,0 +1,16 @@
+main img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 1.5rem auto;
+    object-fit: contain;
+}
+
+main > a > img {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
