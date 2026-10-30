@@ -1,20 +1,44 @@
+/* Mahyar's simple custom css =^.^= */
+
 :root {
     --bg: #0f1115;
     --text: #e6e8eb;
     --dim: #8b919a;
     --accent: #00aff0;
     --line: #292d35;
+
     --mono: Consolas, "Courier New", monospace;
     --times: "Times New Roman", Times, serif;
+
+    --font-size: 15px;
+    --font-small: 12px;
+
+    --content-width: 1000px;
+    --page-padding: 24px;
 }
 
-.logo {
-    color: #00aff0;
+* {
+    box-sizing: border-box;
 }
 
 body {
+    margin: 0;
     background-color: var(--bg);
     color: var(--text);
+    font-size: var(--font-size);
+    line-height: 1.5;
+}
+
+header,
+main,
+footer {
+    max-width: var(--content-width);
+    margin-inline: auto;
+}
+
+.logo {
+    color: var(--accent);
+    font-family: "Ubuntu", sans-serif;
 }
 
 .tagline {
@@ -40,16 +64,56 @@ a:not(.custom-navbar a):visited {
 hr {
     height: 1px;
     margin: 14px 0;
-    background: var(--line);
+    border: 0;
+    background-color: var(--line);
 }
 
 .label {
-    font: 19px var(--times);
     color: var(--dim);
+    font: 19px var(--times);
 }
 
 footer {
-    padding: 32px 24px 48px;
+    padding: 32px var(--page-padding) 48px;
     color: var(--dim);
-    font-size: 12px;
+    font-size: var(--font-small);
+    line-height: 1.5;
+}
+
+footer p,
+footer a {
+    font-size: inherit;
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding-top: 26px;
+        padding-bottom: 32px;
+    }
+
+    .label {
+        font-size: 17px;
+    }
+}
+
+/* Navbar State */
+
+nav ul::-webkit-scrollbar {
+    display: none;
+}
+
+nav a {
+    display: block;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+nav a.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+nav a.active:visited {
+    color: #fff;
 }
